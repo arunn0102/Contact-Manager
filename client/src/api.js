@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Set up our backend base URL
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // Backend URL
+  baseURL: "https://contact-manager-server-pb33.onrender.com", // Backend URL
 });
 
 // API functions
