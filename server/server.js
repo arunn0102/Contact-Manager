@@ -6,13 +6,17 @@ require('dotenv').config();
 const app = express();
 
 // Middleware (must come first)
+const allowedOrigins = [
+  "https://contact-manager-pi-two.vercel.app/", // replace with your actual Vercel frontend URL
+  "http://localhost:5173", // for local dev
+];
+
 app.use(cors({
-  origin: ["https://your-vercel-app.vercel.app"], // Replace with your Vercel frontend URL
+  origin: allowedOrigins,
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
-// app.use(cors());
-// app.use(express.json());
+
 
 // Routes (after middleware)
 const contactRoutes = require('./routes/contactRoutes');
