@@ -6,8 +6,13 @@ require('dotenv').config();
 const app = express();
 
 // Middleware (must come first)
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: ["https://your-vercel-app.vercel.app"], // Replace with your Vercel frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+// app.use(cors());
+// app.use(express.json());
 
 // Routes (after middleware)
 const contactRoutes = require('./routes/contactRoutes');
