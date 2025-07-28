@@ -46,7 +46,7 @@ const app = express();
 // Allowed origins (update the Vercel link with your actual deployed frontend URL)
 const allowedOrigins = [
   "http://localhost:5173",                  // Local development
-  "https://contact-manager-pi-two.vercel.app/"        // Replace with your actual deployed frontend URL
+  "https://contact-manager-pi-two.vercel.app"        // Replace with your actual deployed frontend URL
 ];
 
 // Middleware

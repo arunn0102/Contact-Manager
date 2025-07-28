@@ -642,12 +642,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookUser, PlusCircle , Pencil, Trash2, Search, Users } from "lucide-react";
-import {
-  fetchContacts,
-  addContact,
-  updateContact,
-  deleteContact,
-} from "./api";
+import { fetchContacts, addContact, updateContact, deleteContact } from "./api";
 
 export default function App() {
   const [contacts, setContacts] = useState([]);
